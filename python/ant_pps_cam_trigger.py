@@ -45,7 +45,11 @@ def main():
                 print("While loop")
                 print(time.time())
                 pps_flag = False
+                
+                print("GPIO LOW", time.time())
+                GPIO.output(cam_pin,GPIO.LOW)
                 trig_high = False
+                
                 next_trig_us = time.time() * 1000000
                 
             now = time.time() * 1000000

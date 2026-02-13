@@ -32,6 +32,8 @@ def main():
     GPIO.setup(pps_pin, GPIO.IN)
     GPIO.setup(cam_pin, GPIO.OUT)
 
+    GPIO.output(cam_pin,GPIO.LOW)
+
     # By default, the poll time is 0.2 seconds, too
     GPIO.add_event_detect(pps_pin, GPIO.RISING, callback=check, polltime=0.2)
     

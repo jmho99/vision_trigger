@@ -7,11 +7,11 @@ import Jetson.GPIO as GPIO
 import time
 
 SOCK_PATH = "/tmp/led_manager.sock"
-GREEN_LED = 29
-RED_LED = 31
+GREEN_LED = 15
+RED_LED = 29
 
-BLINK_HZ_GPS = 10.0
-BLINK_HZ_CAM = 2.0
+BLINK_HZ_GPS = 1.0
+BLINK_HZ_CAM = 5.0
 
 if os.path.exists(SOCK_PATH):
     os.remove(SOCK_PATH)

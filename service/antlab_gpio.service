@@ -1,0 +1,12 @@
+[Unit]
+Description=Antlab GPIO Init
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/home/antlab
+ExecStart=/bin/bash /home/antlab/.antlab_sh/gpio_init.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
